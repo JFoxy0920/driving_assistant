@@ -17,9 +17,8 @@ const { error } = await supabase.from("ride_requests").insert([
 if (!error) setSubmitted(true);
 };
 
-
 if (submitted) return <h2>You are in the queue! Have a great night.</h2>;
-
+  
 // main page
 return (
 <div style={{ padding: 20 }}>

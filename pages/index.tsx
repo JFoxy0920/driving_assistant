@@ -23,17 +23,18 @@ if (submitted) return <h2>You are in the queue! 🎉</h2>;
 
 return (
 <div style={{ padding: 20 }}>
-<h1>Campus Rideshare 🚗</h1>
+<h1>{Party name}</h1>
 <input
 placeholder="Your name"
 value={name}
 onChange={(e) => setName(e.target.value)}
 />
 <br />
+<p>Group Size: </p>
 <input
 type="number"
 min="1"
-max="6"
+max="4"
 value={groupSize}
 onChange={(e) => setGroupSize(parseInt(e.target.value))}
 />

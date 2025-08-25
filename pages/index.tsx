@@ -2,14 +2,14 @@
 import { useState } from "react";
 import { supabase } from "../lib/supabaseClient";
 
-
+// supabase fields 
 export default function Home() {
 const [name, setName] = useState("");
 const [groupSize, setGroupSize] = useState(1);
 const [pickup, setPickup] = useState("");
 const [submitted, setSubmitted] = useState(false);
 
-
+// async function alows 'await' command -> compatability with supaBase
 const submitRide = async () => {
 const { error } = await supabase.from("ride_requests").insert([
 { name, group_size: groupSize, pickup_location: pickup },
@@ -18,9 +18,9 @@ if (!error) setSubmitted(true);
 };
 
 
-if (submitted) return <h2>You are in the queue! 🎉</h2>;
+if (submitted) return <h2>You are in the queue! Have a great night.</h2>;
 
-
+// main page
 return (
 <div style={{ padding: 20 }}>
 <h1>"Party name"</h1>

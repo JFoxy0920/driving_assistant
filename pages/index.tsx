@@ -1,5 +1,6 @@
 // RIDER VIEW
 import { useState } from "react";
+import { useEffect } from "react";
 import { supabase } from "../lib/supabaseClient";
 
 // supabase fields 

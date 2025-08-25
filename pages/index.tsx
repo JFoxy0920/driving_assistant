@@ -23,7 +23,7 @@ if (submitted) return <h2>You are in the queue! 🎉</h2>;
 
 return (
 <div style={{ padding: 20 }}>
-<h1>{Party name}</h1>
+<h1>"Party name"</h1>
 <input
 placeholder="Your name"
 value={name}

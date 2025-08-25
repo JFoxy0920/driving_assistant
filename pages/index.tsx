@@ -31,7 +31,7 @@ export default function Home() {
 
     testConnection();
   }, []);
-
+}
 if (submitted) return <h2>You are in the queue! Have a great night.</h2>;
   
 // main page

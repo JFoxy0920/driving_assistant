@@ -16,6 +16,20 @@ const { error } = await supabase.from("ride_requests").insert([
 ]);
 if (!error) setSubmitted(true);
 };
+  
+export default function Home() {
+  useEffect(() => {
+    const testConnection = async () => {
+      const { data, error } = await supabase.from("ride_requests").select("*").limit(1);
+      if (error) {
+        console.error("Database connection failed:", error.message);
+      } else {
+        console.log("Database connection works:", data);
+      }
+    };
+
+    testConnection();
+  }, []);
 
 if (submitted) return <h2>You are in the queue! Have a great night.</h2>;
   

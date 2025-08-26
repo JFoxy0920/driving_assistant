@@ -14,8 +14,13 @@ export default function Home() {
     const { error } = await supabase.from("ride_requests").insert([
       { name, group_size: groupSize, pickup_location: pickup },
     ]);
-    if (!error) setSubmitted(true);
-  };
+    if (error) {
+      console.error("Insert failed:", error.message);
+      alert("Error submitting ride: " + error.message); // visible in browser
+    } else {
+      setSubmitted(true);
+  }
+};
 
   // test DB connection on page load
   useEffect(() => {

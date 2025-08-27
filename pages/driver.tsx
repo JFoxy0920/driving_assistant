@@ -4,30 +4,34 @@ import { supabase } from "../lib/supabaseClient";
 
 
 export default function Driver() {
-const [ride, setRide] = useState<any>(null);
+  const [ride, setRide] = useState<any>(null);
 
 
-const claimRide = async () => {
-const { data, error } = await fetch("/api/claim", {
-method: "POST",
-}).then((res) => res.json());
-if (!error) setRide(data);
+  const claimRide = async () => {
+    const res = await fetch("/api/claims", { method: "POST" });
+    const ride = await res.json();
+  
+    if (ride.message) {
+      console.error("No rides available");
+    } else {
+      setRide(ride);
+    }
 };
 
 
-return (
-<div style={{ padding: 20 }}>
-<h1>Driver Dashboard 🚙</h1>
-{!ride ? (
-<button onClick={claimRide}>Claim Next Ride</button>
-) : (
-<div>
-<h2>Assigned Ride</h2>
-<p>Name: {ride.name}</p>
-<p>Group size: {ride.group_size}</p>
-<p>Pickup: {ride.pickup_location}</p>
-</div>
-)}
-</div>
-);
+  return (
+    <div style={{ padding: 20 }}>
+    <h1>Driver Dashboard 🚙</h1>
+      {!ride ? (
+      <button onClick={claimRide}>Claim Next Ride</button>
+      ) : (
+    <div>
+      <h2>Assigned Ride</h2>
+      <p>Name: {ride.name}</p>
+      <p>Group size: {ride.group_size}</p>
+      <p>Pickup: {ride.pickup_location}</p>
+    </div>
+      )}
+    </div>
+  );
 }

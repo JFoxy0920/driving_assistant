@@ -21,7 +21,7 @@ export default function Driver() {
 
   return (
     <div style={{ padding: 20 }}>
-    <h1>Driver Dashboard 🚙</h1>
+    <h1>Driver Dashboard</h1>
       {!ride ? (
       <button onClick={claimRide}>Claim Next Ride</button>
       ) : (

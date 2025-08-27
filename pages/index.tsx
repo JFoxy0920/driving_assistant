@@ -12,7 +12,7 @@ export default function Home() {
   // async function allows 'await' command -> compatibility with supabase
   const submitRide = async () => {
     const { error } = await supabase.from("ride_requests").insert([
-      { name, group_size: groupSize, pickup_location: pickup; status: "queued" },
+      { name, group_size: groupSize, pickup_location: pickup, status: "queued" },
     ]);
     if (error) {
       console.error("Insert failed:", error.message);

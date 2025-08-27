@@ -8,7 +8,7 @@ export default function Driver() {
 
 
   const claimRide = async () => {
-    const res = await fetch("/api/claims", { method: "POST" });
+    const res = await fetch("/api/claim", { method: "POST" });
     const ride = await res.json();
   
     if (ride.message) {

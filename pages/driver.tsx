@@ -18,7 +18,9 @@ export default function Driver() {
     }
 };
 
-
+  const dropOff = async () => {
+    setRide(null);
+  }
   return (
     <div style={{ padding: 20 }}>
     <h1>Driver Dashboard</h1>

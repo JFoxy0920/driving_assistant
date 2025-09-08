@@ -18,9 +18,9 @@ export default function Driver() {
     }
 };
 
-  function dropOff {
-    setRide(null);
-  };
+ function dropOff() {
+  setRideState(null);
+}
 
   
   return (

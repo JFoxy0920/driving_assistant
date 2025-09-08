@@ -18,7 +18,7 @@ export default function Driver() {
     }
 };
 
-  const dropOff {
+  function dropOff {
     setRide(null);
   };
 

@@ -36,34 +36,34 @@ export default function Home() {
 
   if (submitted) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-green-50">
-        <h2 className="text-2xl font-semibold text-green-700">
-          🎉 You are in the queue!
+      <div className="flex flex-col items-center justify-center min-h-screen bg-black text-gray-100">
+        <h2 className="text-3xl font-semibold tracking-tight mb-2">
+          You are in the queue.
         </h2>
-        <p className="text-gray-600">Have a great night! 🚗</p>
+        <p className="text-gray-400 text-lg">Your ride request has been logged.</p>
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-6">
-      <h1 className="text-3xl font-bold mb-6 text-purple-700">
-        Request a Ride 🚕
+    <div className="flex flex-col items-center justify-center min-h-screen bg-black text-gray-100">
+      <h1 className="text-4xl font-extrabold tracking-tight mb-10 text-white drop-shadow-lg">
+        Request a Ride
       </h1>
 
       <input
-        className="border rounded-xl p-3 w-64 mb-4 shadow-sm focus:ring-2 focus:ring-purple-400 outline-none"
+        className="bg-zinc-900 border border-zinc-700 rounded-lg p-3 w-72 mb-5 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
         placeholder="Your name"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
 
-      <div className="mb-4 w-64">
-        <label className="block mb-1 font-medium text-gray-700">
+      <div className="mb-5 w-72">
+        <label className="block text-sm font-medium text-gray-400 mb-2">
           Group Size
         </label>
         <input
-          className="border rounded-xl p-3 w-full shadow-sm focus:ring-2 focus:ring-purple-400 outline-none"
+          className="bg-zinc-900 border border-zinc-700 rounded-lg p-3 w-full text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
           type="number"
           min="1"
           max="4"
@@ -73,14 +73,14 @@ export default function Home() {
       </div>
 
       <input
-        className="border rounded-xl p-3 w-64 mb-6 shadow-sm focus:ring-2 focus:ring-purple-400 outline-none"
+        className="bg-zinc-900 border border-zinc-700 rounded-lg p-3 w-72 mb-8 text-gray-100 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
         placeholder="Pickup location"
         value={pickup}
         onChange={(e) => setPickup(e.target.value)}
       />
 
       <button
-        className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-xl shadow-md transition transform hover:scale-105"
+        className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
         onClick={submitRide}
       >
         Request Ride

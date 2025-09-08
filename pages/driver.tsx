@@ -34,7 +34,7 @@ export default function Driver() {
       <p>Name: {ride.name}</p>
       <p>Group size: {ride.group_size}</p>
       <p>Pickup: {ride.pickup_location}</p>
-      <p>filler</p>
+      <p>"/n"</p>
       <button onClick={dropOff}>Drop Ride</button>
     </div>
         

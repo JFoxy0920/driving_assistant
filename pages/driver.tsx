@@ -18,9 +18,11 @@ export default function Driver() {
     }
 };
 
-  const dropOff = async () => {
+  const dropOff {
     setRide(null);
-  }
+  };
+
+  
   return (
     <div style={{ padding: 20 }}>
     <h1>Driver Dashboard</h1>
@@ -33,6 +35,7 @@ export default function Driver() {
       <p>Group size: {ride.group_size}</p>
       <p>Pickup: {ride.pickup_location}</p>
     </div>
+        <button onClick={dropRide}>Drop Ride</button>
       )}
     </div>
   );

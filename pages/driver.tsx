@@ -19,7 +19,7 @@ export default function Driver() {
 };
 
  function dropOff() {
-  setRideState(null);
+  setRide(null);
 }
 
   
@@ -35,7 +35,7 @@ export default function Driver() {
       <p>Group size: {ride.group_size}</p>
       <p>Pickup: {ride.pickup_location}</p>
     </div>
-        <button onClick={dropRide}>Drop Ride</button>
+        <button onClick={dropOff}>Drop Ride</button>
       )}
     </div>
   );

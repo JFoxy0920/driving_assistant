@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../lib/supabaseClient";
+import "../styles/globals.css";
+
+export default function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
+}
 
 export default function Home() {
   const [name, setName] = useState("");
